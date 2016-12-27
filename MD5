@@ -1,13 +1,13 @@
-8b6d9cdaae4ff4a26c937dcd77c70274 *DESCRIPTION
+5ccb42df7373622749407e8063359ecc *DESCRIPTION
 dfd0c7128c8211a116a978587800163a *NAMESPACE
 edb7f9d8bfea0ac6fd779a83a2ef4a4c *R/pkg.R
-5d0594b7555beb0abe9ae1dbd655dc0d *R/read_sas.R
+96d8aa2893eb206587329db99e6e9d6e *R/read_sas.R
 86b1c843cb7dde6d6270c1ed2db7d0b5 *README.md
 af6d8e41b68be9c0229825b4eacc4b34 *build/vignette.rds
-0185ece991da878b528a08c1b32d1968 *inst/NEWS
+07c376b7586fd355b65519ef69650000 *inst/NEWS
 2fc9a8505886b025ac1f679256e97bc4 *inst/doc/spark_sas7bdat_examples.R
 49897bc2290ea4635dbd9d2cf47a59c1 *inst/doc/spark_sas7bdat_examples.Rmd
-694d514c3c40923579dcddd22b2e3aab *inst/doc/spark_sas7bdat_examples.html
+87a436989225c1ce1463eafa4c76793c *inst/doc/spark_sas7bdat_examples.html
 6d7292019b3784d97ba2e2ced4ce5bac *inst/extdata/iris.sas7bdat
 d5498968fe26469b944332a857596de9 *man/spark.sas7bdat-package.Rd
 aa02003f9f344011e0f899c19eadf22e *man/spark_read_sas.Rd
