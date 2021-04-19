@@ -6,10 +6,10 @@
 #' Mark that files on the local file system need to be specified using the full path.
 #' @param table character string with the name of the Spark table where the SAS dataset will be put into
 #' @return an object of class \code{tbl_spark}, which is a reference to a Spark DataFrame based on which
-#' dplyr functions can be executed. See \url{https://github.com/rstudio/sparklyr}
+#' dplyr functions can be executed. See \url{https://github.com/sparklyr/sparklyr}
 #' @export
 #' @seealso \code{\link[sparklyr]{spark_connect}}, \code{\link[sparklyr]{sdf_register}}
-#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/rstudio/sparklyr}
+#' @references \url{https://spark-packages.org/package/saurfang/spark-sas7bdat}, \url{https://github.com/saurfang/spark-sas7bdat}, \url{https://github.com/sparklyr/sparklyr}
 #' @examples
 #' \dontrun{
 #' ## If you haven't got a Spark cluster, you can install Spark locally like this
@@ -41,24 +41,12 @@ spark_read_sas <- function(sc, path, table){
   sdf
 }
 
-
-
-
-
-spark_dependencies <- function(scala_version, ...) {
-  if(scala_version == "2.10"){
-    sparklyr::spark_dependency(
-      packages = c(
-        sprintf("saurfang:spark-sas7bdat:1.1.4-s_%s", scala_version)
-      )
+spark_dependencies <- function(spark_version, scala_version, ...) {
+  sparklyr::spark_dependency(
+    packages = c(
+      sprintf("saurfang:spark-sas7bdat:2.0.0-s_%s", scala_version)
     )
-  }else{
-    sparklyr::spark_dependency(
-      packages = c(
-        sprintf("saurfang:spark-sas7bdat:1.1.5-s_%s", scala_version)
-      )
-    )
-  }
+  )
 }
 .onLoad <- function(libname, pkgname) {
   sparklyr::register_extension(pkgname)
